@@ -44,7 +44,7 @@ class LocalMeshAudioNode:
             # Toggle streaming state based on human presence simulation
             self.is_streaming = presence 
             
-            print(f"\n--- Node Status [{time.strftime('%X']}] ---")
+            print(f"\n--- Node Status [{time.strftime('%X')}] ---")
             print(f" Environment Light : {lux} lux")
             print(f" Human Presence    : {'Active' if presence else 'Away'}")
             print(f" Discovered Peers  : {len(peers)}")
@@ -58,11 +58,6 @@ class LocalMeshAudioNode:
             await asyncio.sleep(5)
 
 if __name__ == "__main__":
-    node = LocalMeshAudioNode()
-    try:
-        asyncio.run(node.run())
-    except KeyboardInterrupt:
-        if __name__ == "__main__":
     node = LocalMeshAudioNode()
     try:
         asyncio.run(node.run())
