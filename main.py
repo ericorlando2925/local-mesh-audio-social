@@ -62,4 +62,9 @@ if __name__ == "__main__":
     try:
         asyncio.run(node.run())
     except KeyboardInterrupt:
+        if __name__ == "__main__":
+    node = LocalMeshAudioNode()
+    try:
+        asyncio.run(node.run())
+    except KeyboardInterrupt:
         print("\nNode stopped.")
